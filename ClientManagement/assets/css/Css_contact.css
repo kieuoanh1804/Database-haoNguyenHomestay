@@ -1,0 +1,67 @@
+
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+input[type="text"]{
+	background: #ECECEC;
+    width: 90%;
+    border: 1px solid #ECECEC;
+}
+input[type="number"]{
+	background: #ECECEC;
+    width: 90%;
+    border: 1px solid  #ECECEC;
+}
+input[type="adress"]{
+	background:  #ECECEC;
+	width: 90%;
+    height: 70px;
+    border: #ECECEC;
+    border: 1px solid  #ECECEC;
+}
+input[type="submit"]{
+	background:   #ECECEC;
+	width: 100px;
+	border: 1px solid  #ECECEC;
+	margin-left: 150px;
+    margin-top: 5px;
+}
+input:hover {
+ 	background: #33CCCC;
+ 	text-transform: 1.2s
+}
+.contentMargin{
+    margin-left: 15px;
+}
+
+.headerMargin{
+    margin-top: 25px;
+}
+.conactMar{
+    margin-left: 50px;
+}
+.buttoncach{
+    /* width: 400px; */
+}
+.catetogy-pc .num2 a{
+    /* border: 1px solid white; */
+    color: white;
+    padding: 5px;
+   
+width: 20%;
+font-size: 20px;
+
+}
+.catetogy-pc .num2 a:hover{
+ color:rgb(84, 219, 236);
+ text-decoration: none;
+}
+@media (max-width: 1023px){
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

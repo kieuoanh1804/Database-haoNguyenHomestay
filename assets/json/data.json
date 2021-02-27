@@ -1,0 +1,193 @@
+{
+  "reservation": [
+    {
+      "firstName": "Oanh",
+      "lastName": "Đoàn",
+      "email": "oanh.doan22@student.passerellesnumeriques.org",
+      "checkInDate": "2021-01-27",
+      "checkOutDate": "2021-01-26",
+      "roomType": "2",
+      "numberOfRoom": "4",
+      "numberOfGuest": "6",
+      "status": "true",
+      "price": "1800000",
+      "note": "Đã chuyển khoản 50%",
+      "id": "5"
+    },
+    {
+      "id": "6",
+      "firstName": "Oanh",
+      "lastName": "Đoàn",
+      "email": "test@gmail.com",
+      "checkInDate": "2021-01-28",
+      "checkOutDate": "2021-01-27",
+      "roomType": "3",
+      "numberOfRoom": "4",
+      "numberOfGuest": "3",
+      "price": "2000000",
+      "status": "true",
+      "note": "Sẽ tới muộn 10p"
+    },
+    {
+      "firstName": "Sỷ",
+      "lastName": "bnguyen",
+      "email": "sy.nguyen22@student.passerellesnumeriques.org",
+      "checkInDate": "2021-01-30",
+      "checkOutDate": "2021-01-31",
+      "roomType": "2",
+      "numberOfRoom": "2",
+      "numberOfGuest": "2",
+      "status": "true",
+      "price": "900000",
+      "note": "Đi Sơn Đoòng",
+      "id": "9"
+    },
+    {
+      "firstName": "pha",
+      "lastName": "nguyễn",
+      "email": "pha.nguyen22@student.passerellesnumeriques.org",
+      "checkInDate": "2021-01-26",
+      "checkOutDate": "2021-01-27",
+      "roomType": "2",
+      "numberOfRoom": "2",
+      "numberOfGuest": "3",
+      "status": "true",
+      "price": "900000",
+      "note": "Có người già",
+      "id": "10"
+    }
+  ],
+  "siteMember": [
+    {
+      "id": "2",
+      "fullName": "Đoàn Thị Kiều Oanh",
+      "avatar": "/member/avatar-default.png",
+      "role": "2",
+      "email": "oanh.doan22@student.passerellesnumeriques.org",
+      "password": "Z774LZWDSy8XXW1",
+      "loginDate": "2020-11-06",
+      "status": "true",
+      "phoneNumber": "12121212121"
+    },
+    {
+      "id": "3",
+      "fullName": "Hồ Thị Lương",
+      "avatar": "/member/avatar-default.png",
+      "role": "2",
+      "email": "luong.ho22@student.passerellesnumeriques.org",
+      "password": "GySkQ_8KG26F5oT",
+      "loginDate": "2020-03-23",
+      "status": "true",
+      "phoneNumber": "212121212"
+    },
+    {
+      "id": "4",
+      "fullName": "Nguyễn Văn Sỷ",
+      "avatar": "/member/avatar-default.png",
+      "role": "2",
+      "email": "sy.nguyen22@student.passerellesnumeriques.org",
+      "password": "123456789",
+      "loginDate": "2020-12-31T06:59:04.982Z",
+      "status": "false",
+      "phoneNumber": "085235456"
+    }
+  ],
+  "partner": [
+    {
+      "id": "1",
+      "name": "Oke khong",
+      "brandLogo": "/partner/hoian.png",
+      "field": "Chair tesst",
+      "contractDate": "2021-01-27",
+      "email": "oke@yahoo.com",
+      "phoneNumber": "121212222"
+    },
+    {
+      "id": "2",
+      "name": "Oke",
+      "brandLogo": "/partner/hoian.png",
+      "field": "Fish",
+      "contractDate": "2020-06-13",
+      "email": "tesst@gmail.com",
+      "phoneNumber": "121212121212"
+    },
+    {
+      "id": "3",
+      "name": "Tripple",
+      "brandLogo": "/partner/hoian.png",
+      "field": "Laundry",
+      "contractDate": "2021-01-28",
+      "email": "doanh3181@gmail.com",
+      "phoneNumber": "0123456789"
+    },
+    {
+      "id": "4",
+      "name": "Oke khong",
+      "brandLogo": "/partner/hoian.png",
+      "field": "Chair tesst",
+      "contractDate": "2021-01-27",
+      "email": "oke@yahoo.com",
+      "phoneNumber": "121212222"
+    },
+    {
+      "id": "5",
+      "name": "Oke",
+      "brandLogo": "/partner/hoian.png",
+      "field": "Fish",
+      "contractDate": "2020-06-13",
+      "email": "tesst@gmail.com",
+      "phoneNumber": "121212121212"
+    },
+    {
+      "id": "6",
+      "name": "Tripple",
+      "brandLogo": "/partner/hoian.png",
+      "field": "Laundry",
+      "contractDate": "2021-01-28",
+      "email": "doanh3181@gmail.com",
+      "phoneNumber": "0123456789"
+    }
+  ],
+  "room": [
+    {
+      "id": "7",
+      "name": "Deluxe Queen Suite",
+      "image": "/deluxeQueenSuite/3.JPG",
+      "accommodates": "2",
+      "beds": "2 Queens",
+      "price": "500000",
+      "description": "Our Deluxe Queen Suite feature a luxurious queen size bed, flat screen smart TV, a fridge, and a large window with partial mountain view. Added comforts such as a powerful AC, fan, and a hot water shower ensure that you have an amazing place to come home to at the end of the day. These rooms also have access to our large pool and shared balconies. ",
+      "status": false
+    },
+    {
+      "id": "8",
+      "name": "Double Queen Room",
+      "image": "/doubleQueenRoom/2.JPG",
+      "accommodates": "2",
+      "beds": "2 Queens",
+      "price": "450000",
+      "description": "Our Double Queen Rooms feature two queen size beds and are ideal for friends travelling together. With lots of space, large windows, and a big armorer, there is no need to squeeze into a small room with nowhere to store your things. There is also a fridge, kettle, and bedside table to ensure that all your comfort needs are covered. Lastly, the luxurious bathroom with rain head shower, toiletries, and stainless steel accents top off the room. ",
+      "status": false
+    },
+    {
+      "id": "9",
+      "name": "Tripple Queen Room",
+      "image": "/doubleQueenRoom/2.JPG",
+      "accommodates": "2 People",
+      "beds": "1 Queen",
+      "price": "500000",
+      "description": "Our Double Queen Rooms feature two queen size beds and are ideal for friends travelling together. With lots of space, large windows, and a big armorer, there is no need to squeeze into a small room with nowhere to store your things. There is also a fridge, kettle, and bedside table to ensure that all your comfort needs are covered. Lastly, the luxurious bathroom with rain head shower, toiletries, and stainless steel accents top off the room. ",
+      "status": false
+    },
+    {
+      "id": "10",
+      "name": "Family Room",
+      "image": "/doubleQueenRoom/2.JPG",
+      "accommodates": "2 People",
+      "beds": "1 Queen",
+      "price": "500000",
+      "description": "Our Family Rooms are spacious and can easily fit your entire family. The best part about these family rooms is the 3 bed configuration allowing for your kids to sleep in separate beds giving everyone in your family a comfortable sleep! Our rooms also have a fridge to keep your drinks cold and a kettle to make a coffee or tea in the morning! All guests are invited to have a filling a la carte breakfast with coffee, tea, or juice. \n\n",
+      "status": false
+    }
+  ]
+}

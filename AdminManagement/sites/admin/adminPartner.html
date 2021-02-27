@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin | Partner Info</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../assets/css/admin.css" />
+</head>
+
+<body onload="handleAccessPage()" style="background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080')">
+    <div class="main-container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html" style="color: #149077; font-weight: bold;">HomeStay - Administrator</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./adminRoom.html">Room</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./adminReserve.html">Reservation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./adminSiteMember.html">Member</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./adminPartner.html">Partner</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="handleLogout()"><i class="fas fa-sign-out-alt"></i>
+                                Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main class="content">
+            <div class="card">
+                <div class="card-header">
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#partnerModal" onclick="onClickAddButton()"><i class="fas fa-plus"></i>&nbsp;&nbsp;New partner</button>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead id="table-header" style="display: none;">
+                            <tr>
+                                <th scope="col" width="20">ID</th>
+                                <th scope="col" width="150">Name</th>
+                                <th scope="col" width="150">Brand Logo</th>
+                                <th scope="col" width="150">Field</th>
+                                <th scope="col" width="150">Contract Date</th>
+                                <th scope="col" width="100">Email</th>
+                                <th scope="col" width="100">Phone Number</th>
+                                <th scope="col" width="150">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partner-data">
+                            <div class="text-center" id="loading-image" style="display: none;">
+                                <img src='http://automobiles.honda.com/images/current-offers/small-loading.gif' alt='loading...' />
+                            </div>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal fade" id="partnerModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLabel"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="partner-form">
+                                <div class="form-group">
+                                    <label for="Name">Name</label>
+                                    <input class="form-control" type="text" id="name" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Brand Logo">Brand Logo</label>
+                                    <input class="form-control" type="text" id="brandLogo" placeholder="Brand Logo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Feild">Feild</label>
+                                    <input class="form-control" type="text" id="field" placeholder="Feild">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contractDate">Contract Date</label>
+                                    <input type="date" class="form-control" id="contractDate">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Email">Email</label>
+                                    <input class="form-control" type="email" id="email" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Phone Number">Phone Number</label>
+                                    <input class="form-control" type="text" id="phoneNumber" placeholder="Phone Number">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" id="action-button" data-dismiss="modal">Submit</button>
+                            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Bootstrap script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- External JS -->
+    <script type="text/javascript" src="../../assets/js/admin/globalData.js"></script>
+    <script type="text/javascript" src="../../assets/js/admin/authenticationBusiness.js"></script>
+    <script type="text/javascript" src="../../assets/js/admin/adminPartnerBusiness.js"></script>
+</body>
+
+</html>

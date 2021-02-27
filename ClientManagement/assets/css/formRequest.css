@@ -1,0 +1,109 @@
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+}
+
+.homestay-info {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+}
+
+
+/* Modal Style */
+
+.modal-custom {
+    max-width: 65%;
+}
+
+.reserve-input-area .reserve-form {
+    padding: 0px 45px;
+}
+
+.reserve-title h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #027737;
+    letter-spacing: 3px;
+}
+
+.modal-backdrop {
+    background-color: transparent;
+}
+
+.btn-submit {
+    width: 120px;
+    background-color: #027737;
+    color: #fff;
+}
+
+.btn-submit:hover {
+    background-color: rgb(187, 187, 6);
+    color: #fff;
+}
+
+
+/* End Modal Style */
+
+.homestay-note {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 100px;
+}
+
+.homestay-note p {
+    color: #CCCCCC;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    line-height: 1.2em;
+    text-align: center;
+    pointer-events: auto;
+}
+
+
+/* Slider */
+
+.slider {
+    margin-top: 5rem;
+}
+
+.slider-img {
+    width: 100%;
+    height: 200px;
+}
+
+
+/* End slider style */
+
+.homestay-logo {
+    width: 40%;
+}
+
+.contact {
+    margin-top: 25px;
+}
+
+.social-nedia i {
+    color: black;
+    font-size: 25px;
+    letter-spacing: 15px;
+}
+
+.mail-contact {
+    margin-top: 10px;
+}
+
+.mail-contact a {
+    color: black;
+}
+
+.mail-contact a:hover {
+    text-decoration: none;
+}

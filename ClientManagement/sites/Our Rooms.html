@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/welcome.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+    <!--Modal -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <link rel="stylesheet" href="../assets/css/ourRoom.css" />
+    <link rel="stylesheet" href="../assets/css/formRequest.css" />
+
+    <!-- External JS -->
+    <script type="text/javascript" src="../assets/js/globalData.js"></script>
+    <!--<script type="text/javascript" src="js/userRoom.js"></script>-->
+    <script type="text/javascript" src="../assets/js/dbroom.js"></script>
+    <script type="text/javascript" src="../assets/js/authenticationBusiness.js"></script>
+    <script type="text/javascript" src="../assets/js/formRequest.js"></script>
+    <!-- Bootstrap script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="../assets/Images/honestay-logo.png" alt="">
+        </div>
+        <div class="row1">
+            <div class="catetogy-pc">
+                <button class="num1"><b><a href="welcome.html">Welcome</a> </b></button>
+                <button class="num"><b><a href="Our homestay.html">Our Homestay</a></b></button>
+
+                <button type="button" class="num"><b style="color: rgb(84, 219, 236);">Our Rooms</b></button>
+
+                <div class="dropdown-menu">
+                    <div><a href="#" data-toggle="modal" data-target="#myModal" onclick="up(0)"
+                            class="dropdown-item">Deluxe Queen Corner suite</a></div>
+                    <div><a href="#" data-toggle="modal" data-target="#myModal" onclick="up(1)"
+                            class="dropdown-item">Deluxe Queen Suite</a></div>
+                    <div><a href="#" data-toggle="modal" data-target="#myModal" onclick="up(2)"
+                            class="dropdown-item">Double Queen Room</a></div>
+                    <div><a href="#" data-toggle="modal" data-target="#myModal" onclick="up(3)"
+                            class="dropdown-item">TripleRoom</a></div>
+                    <div><a href="#" data-toggle="modal" data-target="#myModal" onclick="up(4)"
+                            class="dropdown-item">FamilyRoom</a></div>
+                </div>
+
+                <button class="num"><b><a href="Contact.html">Contact</a></b></button>
+                <button class="num2"><b><a href="Thing to do.html">Things to
+                            do</a></b></button>
+            </div>
+            <label for="check" class="bar" id="but">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+            <input type="checkbox" id="check" class="checked">
+            <label class="out-play" for="check"></label>
+
+            <div class="mobile">
+                <label class="close" for="check">
+                    <!-- <h4 class="til">DANH MUC</h4>  -->
+                    <i class="fa fa-times" id="icon" aria-hidden="true"></i>
+                </label>
+                <ul class="catetogy-mobile">
+                    <li class="num"><b>Welcome</b></li>
+                    <li class="num"><b><a href="../Our homestay/Our homestay.html">Our Homestay</a></b></li>
+                    <li class="num"><b>Our Rooms</b></li>
+                    <li class="num"><b><a href="Contact.html">Contact</a></b></li>
+                    <li class="num"><b><a href="../Logoutlogin/Thing to do/Thing to do.html">Things to do</a></b>
+                </ul>
+
+            </div>
+            <div class="welcome">
+                
+                <div class="container-fluid" id="rooms">
+                    <div class="row" style="display: block;" id="intro">
+                        <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                        <div class="col-lg-10 col-md-10 col-sm-10">
+                            <h1 style="text-align: left;">Our room</h1>
+                            <h5 style="text-align: left; ">Our homestay is here to prove that you do not need to
+                                sacrifice quality to stay with a local family. Though we are one of the original
+                                homestays in Phong Nha, we recently rebuilt our facility to include a modern open plan
+                                lobby, swimming pool, and updated rooms. All our rooms are bright and tastefully
+                                decorated to ensure that our guests are comfortable. Each room comes with fast WiFi, a
+                                filling breakfast, powerful A/C, and a new flat screen smart TV. If there is anything
+                                further you may need our family is here to help make your stay as comfortable as
+                                possible.
+                            </h5>
+                        </div>
+                    </div>
+                    <!-- <script type="text/javascript" src="js/dbroom.js"></script> -->
+                    <div class="row" id="add"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <!-- <center> -->
+        <div class="tiltlefoot">
+            <b class="font">Find us</b>
+            <br>
+            Son Trach-Bo Trach-Quang Binh
+        </div>
+        <div class="tiltlefoot">
+            <b class="font">Call us to book</b>
+            <br>
+            +84 977 560 122
+        </div>
+        <div class="tiltlefoot">
+            <b class="font">Email us</b>
+            <br>
+            phongnha.thaonguyen@gmail.com
+        </div>
+        <br>
+        <div class="footimg">
+            <img src="https://static.wixstatic.com/media/17cf82e0d3fc4c11a370a8eedfefa0fb.png/v1/fill/w_41,h_41,al_c,q_85,usm_0.66_1.00_0.01/17cf82e0d3fc4c11a370a8eedfefa0fb.webp"
+                alt="" srcset="">
+            <img src="https://static.wixstatic.com/media/4057345bcf57474b96976284050c00df.png/v1/fill/w_41,h_41,al_c,q_85,usm_0.66_1.00_0.01/4057345bcf57474b96976284050c00df.webp"
+                alt="" srcset="">
+            <img src="https://static.wixstatic.com/media/01c3aff52f2a4dffa526d7a9843d46ea.png/v1/fill/w_41,h_41,al_c,q_85,usm_0.66_1.00_0.01/01c3aff52f2a4dffa526d7a9843d46ea.webp"
+                alt="" srcset="">
+        </div>
+        <div class="foot">
+            ©Thao Nguyen Homestay. Proudly created by The Roving Route
+        </div>
+        <!-- </center> -->
+    </div>
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-custom">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid" id="rooms">
+                        <div>
+                            <h2 id="name"></h2>
+                        </div>
+                        <div>
+                            <p id="description"></p>
+                        </div>
+                        <div id="img"></div>
+                        <h3 style="text-align: center;">Properties</h3><br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4">Accommodates: <label id="accommodates"> </label>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">Beds: <label id="beds"> </label></div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">Size: 30m² / 320ft²</div>
+                        </div><br>
+                        <h3 style="text-align: center;">Amenities</h3><br>
+                        <div class="row">
+                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                                        <img src="../assets/Images/air2.png" style="width: 100%; height:100%;">
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-8 col-sm-8">Air conditioning</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <img src="../assets/Images/shower.png" style="width: 80%; height:80%;">
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">Shower</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                                        <img src="../assets/Images/fridge.png" style="width: 100%; height:90%;">
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">Fridge</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                                        <img src="../assets/Images/fan.png" style="width: 100%; height:100%;">
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">Fan</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <img src="../assets/Images/towels.png" style="width: 80%; height:80%;">
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">Towels</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                                        <img src="../assets/Images/kettle.png" style="width: 100%; height:100%;">
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">Kettle</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                                        <img src="../assets/Images/fork.png" style="width: 100%; height:100%;">
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-8 col-sm-8">Free Breakfast</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <img src="../assets/Images/toilet.png" style="width: 80%; height:80%;">
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">Toiletries</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                                        <img src="../assets/Images/sofa.png" style="width: 100%; height:100%;">
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">Sofa</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                                        <img src="../assets/Images/wifi.png" style="width: 100%; height:80%;">
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9 col-sm-9">Free WiFi in room</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <img src="../assets/Images/linen.png" style="width: 80%; height:80%;">
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-8 col-sm-8">Linens, Pillows</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                                        <img src="../assets/Images/tv.png" style="width: 100%; height:80%;">
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-8 col-sm-8">Smart TV</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                                        <img src="../assets/Images/hour.png" style="width: 100%; height:100%;">
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9 col-sm-9">Wake-up Services</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <img src="../assets/Images/hair.png" style="width: 80%; height:80%;">
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">Hair Dryer</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                                        <img src="../assets/Images/wardrobe.png"
+                                                            style="width: 100%; height:100%;">
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">Dresser</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                                        <img src="../assets/Images/washing.png" style="width: 100%; height:70%;">
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9 col-sm-9">Express and Regular Laundry
+                                                        Services</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <img src="../assets/Images/slip.png" style="width: 80%; height:80%;">
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">Slippers</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="row">
+                                            <div class=" col-lg-12 col-md-12 col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                                        <img src="../assets/Images/lamp2.png" style="width: 100%; height:100%;">
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">Lamp</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <p></p>
+                        <h3 style="text-align: center;">Terms and Conditions</h3>
+                        <br>
+                        <div class="row">
+                            <div class=" col-lg-4 col-md-4 col-sm-4">
+                                Check-in: 1pm
+                            </div>
+                            <div class=" col-lg-4 col-md-4 col-sm-4">
+                                Check-out: 11am
+                            </div>
+                            <div class=" col-lg-4 col-md-4 col-sm-4">
+                                Pay at hotel (cash or credit)
+                            </div>
+                        </div> <br>
+                        <div class="row">
+                            <div class=" col-lg-4 col-md-4 col-sm-4">
+                                No smoking in rooms
+                            </div>
+                            <div class=" col-lg-4 col-md-4 col-sm-4">
+                                No pets allowed
+                            </div>
+                            <div class=" col-lg-4 col-md-4 col-sm-4">
+
+                            </div>
+                        </div>
+                        <h3 style="text-align: center;">Price</h3>
+                        <div class="row">
+                            <div class=" col-lg-4 col-md-4 col-sm-4"></div>
+                            <div class=" col-lg-4 col-md-4 col-sm-4">
+                                <h3 id="price" style="margin-left: 30%;"> </h3>
+                            </div>
+                            <div class=" col-lg-2 col-md-2 col-sm-2"></div>
+                        </div>
+                        <div class="row">
+                            <div class=" col-lg-5 col-md-5 col-sm-5"></div>
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                                data-target="#reserveFormModal">Reserve Now</button>
+                            <div class=" col-lg-2 col-md-2 col-sm-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="reserveFormModal" tabindex="-1" aria-labelledby="reserveFormModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-custom">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4 homestay-info">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-center">
+                                            <img src="../assets/Images/honestay-logo.png" class="homestay-logo"
+                                                alt="homestay-logo" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 slider">
+                                        <div class="carousel slide" data-ride="carousel">
+                                            <div id="slider" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="../assets/Images/slide/homestay-1.png"
+                                                            class="d-block slider-img" alt="slider">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="../assets/Images/slide/homestay-2.png"
+                                                            class="d-block slider-img" alt="slider">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="../assets/Images/slide/homestay-3.png"
+                                                            class="d-block slider-img" alt="slider">
+                                                    </div>
+                                                </div>
+                                                <a class="carousel-control-prev" href="#slider" role="button"
+                                                    data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#slider" role="button"
+                                                    data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 homestay-note">
+                                        <p>*Note this is not a confirmation for your booking. You will receive an email
+                                            for a Price Quote. You must accept the quote before a reservation is made.
+                                            If you do not receive a Price Quote within 48 hrs please
+                                            contact us. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 ml-auto reserve-input-area">
+                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                <div class="text-center reserve-title">
+                                    <h3>Room Request</h3>
+                                    <h3>Form</h3>
+                                </div>
+                                <form class="reserve-form">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputFirstName">First Name *</label>
+                                            <input type="text" class="form-control" id="inputFirstName" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputLastName">Last Name *</label>
+                                            <input type="text" class="form-control" id="inputLastName" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail">Email *</label>
+                                        <input type="email" class="form-control" id="inputEmail" required>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputCheckinDate">Check-in Date *</label>
+                                            <input type="date" class="form-control" id="inputCheckinDate" min="today"
+                                                required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputCheckoutDate">Check-out Date *</label>
+                                            <input type="date" class="form-control" id="inputCheckoutDate" min="today"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputRoomType">Room Type *</label>
+                                            <select id="inputRoomType" class="form-control" required>
+                                                <option value=""></option>
+                                                <option value="1">Deluxe Queen Corner Suite</option>
+                                                <option value="2">Deluxe Queen Suite</option>
+                                                <option value="3">Double Queen Room</option>
+                                                <option value="4">Triple Room</option>
+                                                <option value="5">Family Room</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputNumberOfRooms">Number of Rooms</label>
+                                            <select id="inputNumberOfRooms" class="form-control" required>
+                                                <option selected>Choose an option</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="3">4</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputNumberOfGuests">Number of Guests *</label>
+                                            <select id="inputNumberOfGuests" class="form-control" required>
+                                                <option selected>Choose an option</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputNote">Notes or any requests:</label>
+                                        <textarea class="form-control" rows="2" id="inputNote"></textarea>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-submit">Submit</button>
+                                    </div>
+                                </form>
+                                <div class="contact text-center">
+                                    <div class="social-nedia">
+                                        <a id="tripadvisor" target="_blank" rel="noopener noreferrer"><i
+                                                class="fab fa-tripadvisor"></i></a>
+                                        <a id="facebook" target="_blank" rel="noopener noreferrer"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a id="instagram" target="_blank" rel="noopener noreferrer"><i
+                                                class="fab fa-instagram"></i></a>
+                                    </div>
+                                    <div class="mail-contact">
+                                        <p><span><a href="mailto:myhomestay@gmail.com">myhomestay@gmail.com</a> | Tel:
+                                                +84 896 205 232</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="E:\Do an\Homestay\assets\js\smtp\smtp.js"></script>
+    <script type="text/javascript" src="E:\Do an\Homestay\assets\js\client\formRequest.js"></script>
+    <script type="text/javascript" src="E:\Do an\Homestay\assets\js\client\clientReservationBusiness.js"></script>
+
+</body>
+
+</html>

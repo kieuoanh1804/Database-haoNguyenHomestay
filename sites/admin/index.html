@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin | Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../assets/css/admin.css" />
+    <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+</head>
+
+<body onload="handleAccessPage()" style="background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080')">
+    <div class="main-container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html" style="color: #149077; font-weight: bold;">HomeStay - Administrator</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./index.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./adminRoom.html">Room</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./adminReserve.html" >Reservation</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./adminSiteMember.html">Member</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./adminPartner.html">Partner</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="handleLogout()"><i class="fas fa-sign-out-alt"></i>
+                                Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main class="dashboard-content">
+            <div class="main-section">
+                <div class="dashboard dashboard-green">
+                    <div class="icon-section">
+                        <i class="fas fa-money-bill-alt" aria-hidden="true"></i><br>
+                        <small>Revenue</small>
+                        <p id="statistic-count"></p>
+                    </div>
+                    <div class="detail-section">
+                        <a href="./adminReserve.html">More Info</a>
+                    </div>
+                </div>
+                <div class="dashboard">
+                    <div class="icon-section">
+                        <i class="fas fa-person-booth" aria-hidden="true"></i><br>
+                        <small>Rooms</small>
+                        <p id="room-count"></p>
+                    </div>
+                    <div class="detail-section">
+                        <a href="./adminRoom.html">More Info</a>
+                    </div>
+                </div>
+                <div class="dashboard dashboard-orange">
+                    <div class="icon-section">
+                        <i class="fa fa-bell" aria-hidden="true"></i><br>
+                        <small>Reserve</small>
+                        <p id="reservation-count"></p>
+                    </div>
+                    <div class="detail-section">
+                        <a href="./adminReserve.html">More Info</a>
+                    </div>
+                </div>
+                <div class="dashboard dashboard-blue">
+                    <div class="icon-section">
+                        <i class="fas fa-users" aria-hidden="true"></i><br>
+                        <small>Site Members</small>
+                        <p id="member-count"></p>
+                    </div>
+                    <div class="detail-section">
+                        <a href="./adminSiteMember.html">More Info </a>
+                    </div>
+                </div>
+                <div class="dashboard dashboard-red">
+                    <div class="icon-section">
+                        <i class="far fa-handshake" aria-hidden="true"></i><br>
+                        <small>Partners</small>
+                        <p id="partner-count"></p>
+                    </div>
+                    <div class="detail-section">
+                        <a href="./adminPartner.html">More Info </a>
+                    </div>
+                </div>
+                <div class="dashboard dashboard-skyblue">
+                    <div class="icon-section">
+                        <i class="fas fa-users-cog" aria-hidden="true"></i><br>
+                        <small>Admin Information</small>
+                        <p>Thao nguyen</p>
+                    </div>
+                    <div class="detail-section">
+                        <a href="#" onclick="alert('In developing...')">More Info </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Bootstrap script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- External JS -->
+    <script type="text/javascript" src="../../assets/js/admin/globalData.js"></script>
+    <script type="text/javascript" src="../../assets/js/admin/authenticationBusiness.js"></script>
+    <script type="text/javascript" src="../../assets/js/admin/adminDashboardBusiness.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thing to do</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.bundle.js">
+    <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/fontawesome.css">
+        <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script> -->
+<!--  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" /> -->
+
+    <link rel="stylesheet" href="inform.css">
+</head>
+
+<body >
+    <div class="container-fluid">
+        
+        <div class="row ">
+            <div class="all col-lg-4 col-md-4 col-sm-4">
+                <h1>All Post</h1>
+                <div id="rr" class="icon2">ddd</div>
+                <button id="log" class="icon3" onclick="logout()">Logout
+                </button>
+            </div>
+            <div class="search col-lg-6 col-md-6 col-sm-6">
+                <div class="right">
+                    <form>
+                        <input type="text" name="search" placeholder="Search..">
+                      </form>           
+                          
+                </div>
+                
+            </div>
+
+            
+            <div class="col-lg-2 col-md-2 col-sm-2">
+                <!-- <button class="right" type="button" id="Signin"><i class="fas fa-user"></i> &nbsp; Log in/Sign up</button> -->
+                <div id="icon9" class="icon9">ddd</div>
+                <button id="icon5" class="icon5" onclick="logout()">Logout
+                </button>
+                <button type="button" id="Signin" onclick="getData35()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                    Log in/Sign up
+                </button>
+                <a href=""></a>
+            </div>
+
+        </div>
+        
+        <div class="row ">
+            <div class="all col-lg-6 col-md-6 col-sm-6">
+                <img src="girl.PNG" style="height: 100%; width: 100%;">
+            </div>
+
+            <div class="all col-lg-6 col-md-6 col-sm-6">
+                <div class=" col-lg-12 col-md-12 col-sm-12">
+                   
+                    <p><a href="#">
+                        Thao Nguyen Homestay</a><br>
+                        Nov 12, 2020<br>
+                        1 min read
+                    </p>
+                    <a  href="inform2.html">
+                    <p >⭐️⭐️⭐️<br>
+                    <h3 >Cập nhật tình hình các địa điểm tham quan ở Phong Nha</h3>
+                    Cập nhật tình hình các địa điểm tham quan ở Phong Nha:
+                    Động Phong Nha: Mở cửa nhưng chỉ được tham quan 2/3, có thể mở cửa lại toàn bộ sớm. Gọi số hotline
+                    +84 (0) 91 1371838 (phòng vé động Phong Nha) trước khi đi để nắm thêm thông tin.
+                    Động Thiên Đường: Tạm dừng đón khách tham quan cho tới ngày 10 tháng 12
+                    Hang Tối đã mở cửa trở lại bình thường.
+                    Suối Mooc, Ozo: vẫn tạm thời đóng cửa.
+                    CÁC ĐỊA ĐIỂM TRÊN VẪN ÁP DỤNG GIẢM GIÁ 50% CHO KHÁCH THAM QUAN TỪ NAY ĐẾN HẾT NĂM....</p></a>
+                    <hr>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="row icon">
+                        <div class="view col-lg-3 col-md-3 col-sm-3">
+                            <button><i class="fas fa-eye">View</i></button>
+                        </div>
+                        <div class="comment col-lg-4 col-md-4 col-sm-4">
+                            <button><i class="fas fa-comments">Comment</i></button>
+                        </div>
+                        <div class="heart col-lg-3 col-md-3 col-sm-3">
+                            <button><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <div class="row ">
+            <div class="all col-lg-6 col-md-6 col-sm-6">
+                <img src="girl2.PNG" style="height: 100%; width: 100%;">
+            </div>
+
+            <div class="all col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-12 col-md-12 col-sm-12" onclick="display()">
+                    
+                    <p><a href="#">
+                        Thao Nguyen Homestay</a><br>
+                        Mar 24, 2020<br>
+                        4 min read<br>
+                    </p>
+                    <a  href="inform3.html">
+                    <p>⭐️⭐️⭐<br>
+                    <h3 >Kinh nghiệm du lịch Phong Nha</h3>
+                        Tuyến 1: Cầu Chày – Trằm Mé (2 – 3 tiếng). Nên đi bằng xe đạp
+                        - Từ Thảo Nguyên Homestay đi tới bến thuyền Trằm Mé (4km). Đi thuyền qua bên kia sông là một
+                        trải nghiệm mới lạ và thú vị cho du khách (giá 5000 – 10.000VND cho 1 người và xe). Sau đó tiếp
+                        tục hành trình qua làng Trằm Mé và 2 cây cầu treo. Khi đến cây cầu treo thứ 2 thì quay đầu về.
+                        </p></a>
+                        <hr>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class=" icon col-lg-12 col-md-12 col-sm-12">
+                        <div class="row icon">
+                            <div class="view col-lg-3 col-md-3 col-sm-3">
+                                <button><i class="fas fa-eye">View</i></button>
+                            </div>
+                            <div class="comment col-lg-4 col-md-4 col-sm-4">
+                                <button><i class="fas fa-comments">Comment</i></button>
+                            </div>
+                            <div class="heart col-lg-3 col-md-3 col-sm-3">
+                                <button><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <hr>  
+        <br>
+        
+         <!-- The Modal -->
+         <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                <span class="close">&times;</span>
+                <!--<h2>Modal Header</h2>-->
+                </div>
+                <div class="modal-body">
+                <!--<p>Some text in the Modal Body</p>
+                <p>Some other text...</p>-->
+                <div class="container2">
+                    <form action="">
+                      <div class="row">
+                       <!-- <h2 style="text-align:center">LOGIN</h2>-->
+                        <div class="vl">
+                          <span class="vl-innertext">or</span>
+                        </div>
+                  
+                        <div class="col">
+                          <a href="#" class="fb btn">
+                            <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                           </a>
+                          <a href="#" class="twitter btn">
+                            <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                          </a>
+                          <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+                            </i> Login with Google+
+                          </a>
+                        </div>
+                        <div class="col">
+                          <div class="hide-md-lg">
+                            <p>Or sign in manually:</p>
+                          </div>
+                          <input type="text" id="username"  placeholder="Username" required>
+                          <input type="password" id="password"  placeholder="Password" required>
+                          
+                        </div>
+                        <!-- <button id="log4" class="btn btn-primary btn-lg" style="width: 30px; display: none;">jj</button> -->
+                      </div>
+                    </form>
+                    <button class="eye" id="eye" onclick="if (password.type == 'text') password.type = 'password';
+                                else password.type = 'text';"><i class="fa fa-eye"></i></button>
+                    <label id="login" for="log4" class="btn btn-primary btn-lg" onclick="login2();">
+                        LOGIN
+                    </label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                <!--<h3>Modal Footer</h3>-->
+                <div class="bottom-container">
+                    <div class="row">
+                      <div class="col">
+                        <button type="button" onclick="set();" id="signup" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ModalLoginForm">
+                            Signup
+                        </button>
+                      </div>
+                      <div class="col">
+                        <a href="#" style="color:white" class="btn">Forgot password?</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+         </div>
+            
+    
+            <div id="ModalLoginForm" class="modal fade">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title">Sign up</h1>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form" method="POST" action="" name="formRegister" id="signupform">
+                                <input type="hidden" name="_token" value="">
+                                <div class="form-group">
+                                    <label class="control-label">Username</label>
+                                    
+                                    <div>
+                                        <input type="text" onkeyup="check()" class="form-control input-lg" id="name" name="name" value="" required>
+                                        <span id="error5" style="color: red;">Username already exists</span>
+                                        <img src="22.PNG" alt="" class="error1" id="error1">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">E-Mail Address</label>
+                                    <div>
+                                        <input type="email" class="form-control input-lg" id="email" name="email" value="">
+                                        <img src="22.PNG" alt="" class="error2" id="error2">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Password</label>
+                                    <div>
+                                        <input type="password"  class="form-control input-lg" id="password3" name="password">
+                                        <img src="22.PNG" alt="" class="error3" id="error3">
+                                        <img src="222.PNG" alt="" class="error4" id="error4">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Confirm Password</label>
+                                    <div>
+                                        <input type="password" class="form-control input-lg" id="password-corfirm" name="password_confirmation">
+                                    </div>
+                                </div>
+                            </form>
+                            <button class="btn btn-primary btn-lg" onclick="register();">
+                                SIGNUP
+                            </button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div>
+            <script src="inform2.js"></script>
+            <script src="smtp.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+<br>
+<footer style="background-color: rgb(235, 228, 228);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <p style="font-family: serif; text-align: center;">Find us<br>
+                    Sơn Trạch, Bố Trạch, Quảng Bình</p>
+            </div>
+            <div class="foot col-lg-4 col-md-4 col-sm-4">
+                <p>Call us to book<br>
+                    +84 977 560 122</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <p style="text-align: center;">Email us<br>
+                    phongnha.thaonguyen@gmail.com</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" hatstack col-lg-4 col-md-4 col-sm-4">
+
+            </div>
+
+            <div class=" foot col-lg-4 col-md-4 col-sm-4">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4">
+
+            </div>
+        </div>
+        <div class=" foot col-lg-12 col-md-12 col-sm-12 ">
+            <p>©Thao Nguyen Homestay. Proudly created by The Roving Route</p>
+        </div>
+    </div>
+    <br>
+</footer>
+<br>
+</html>

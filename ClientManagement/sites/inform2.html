@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap nhat dia diem</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="../assets/js/inform.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="../assets/css/inform.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="all col-lg-4 col-md-4 col-sm-4">
+                <h2>All Post</h2>
+            </div>
+            <div class="search col-lg-6 col-md-6 col-sm-6">
+                <div class="right">
+                    <form>
+                        <input type="text" name="search" placeholder="Search..">
+                      </form>               
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2">
+                <button class="right" type="button" id="Signin"><i class="fas fa-user"></i> &nbsp; Log in/Sign up</button>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="all col-lg-2 col-md-2 col-sm-2"></div>
+            <div class="all col-lg-8 col-md-8 col-sm-8" >
+                <p><img src="../assets/Images/logo2.png" ><a href="#"> Thao Nguyen Homestay</a><i class='fas fa-chess-queen'></i> Mar 24, 2020 4 min read<br>
+                </p>
+                
+                <h3 >⭐️⭐️⭐<br>Cập nhật tình hình các địa điểm tham quan ở Phong Nha</h3>
+                <p>
+                Cập nhật tình hình các địa điểm tham quan ở Phong Nha:
+                Động Phong Nha: Mở cửa nhưng chỉ được tham quan 2/3, có thể mở cửa lại toàn bộ sớm. Gọi số hotline +84 (0) 91 1371838 (phòng vé động Phong Nha) trước khi đi để nắm thêm thông tin.
+                Động Thiên Đường: Tạm dừng đón khách tham quan cho tới ngày 10 tháng 12 
+                Hang Tối đã mở cửa trở lại bình thường.
+                Suối Mooc, Ozo: vẫn tạm thời đóng cửa.
+                CÁC ĐỊA ĐIỂM TRÊN VẪN ÁP DỤNG GIẢM GIÁ 50% CHO KHÁCH THAM QUAN TỪ NAY ĐẾN HẾT NĂM.
+                
+                Thời tiết hiện tại đang đẹp, có chút se lạnh. Rất thích hợp để đi tham quan du lịch. Nếu bạn là người yêu thích các hoạt động du lịch khám phá, thăm quan hang động kết hợp tìm hiểu văn hóa địa phường thì có thể tham khảo thêm tại Oxalis Aventure Tours.
+                
+                Nếu cần thêm thông tin thì các bạn có thể liên hệ
+                Phone/Zalo/Whatsaap: 0977560122.
+                Thảo Nguyên Homestay. Liên hệ để đặt phòng, tour và xe đưa đón.
+                </p>
+            </div>
+            <div class="all col-lg-2 col-md-2 col-sm-2"></div>
+        </div>
+        <div class="row ">
+            <div class="all col-lg-2 col-md-2 col-sm-2"></div>
+            <div class="all  col-lg-8 col-md-8 col-sm-8" >
+                <img src="../assets/Images/gaido.webp" style="height: 100%; width: 100%;">
+            </div>
+            <div class="all col-lg-2 col-md-2 col-sm-2"></div>
+           
+        </div>
+        <hr>
+        <div class="row">
+            <div class="all col-lg-2 col-md-2 col-sm-2"></div>
+            <div class="all col-lg-8 col-md-8 col-sm-8" >
+                <h4>Comments</h4>
+                <hr>
+                <div class="comment" id="com">
+
+                </div>
+                <form>
+                    <div class="form-group">
+                      <label for="comment">Comment:</label>
+                      <textarea class="form-control" rows="5" id="comment"></textarea>
+                      <button onclick="addComment()" style="border: green solid 1px;">Đăng</button>
+                    </div>
+                  </form>
+            </div>
+            <div class="all col-lg-2 col-md-2 col-sm-2"></div>   
+        </div>
+    </div>
+<script>
+    var comments =[];
+            
+            //đẩy mảng product vào local
+            function Save() {
+                localStorage.setItem('comments',JSON.stringify(comments));
+            }
+            //lấy sản phẩm
+            function  load() {
+                comments = JSON.parse(localStorage.getItem('comments'));
+                commentAdmin();
+            }
+            //xuất sản phẩm ra html
+            if(localStorage.getItem("comments")!=null){
+                load();
+            }
+    
+            function commentAdmin() {
+            var listproduct1 ="";
+            for (var i in comments){
+                var data = JSON.parse(JSON.stringify(comments[i]))
+                var listproduct1 = '<div>';
+                listproduct1+='<h4><u>'+data.id+'</u></h4>';
+                listproduct1+='<p>'+data.comment+'</p>';               
+                listproduct1+='</div>';
+    
+                document.getElementById("com").innerHTML += listproduct1;
+            }        
+         }    
+         //Them du lieu
+        var addComment = function(){
+            var add = {
+                id:"Customer "+parseInt(comments.length+1),
+                comment: document.getElementById("comment").value
+            }
+                comments.push(add);
+                localStorage.setItem('comments', JSON.stringify(comments));
+                Save();              
+                window.location.reload();
+        }
+</script>
+</body>
+<br>
+
+<footer style="background-color: rgb(235, 228, 228);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <p style="font-family: serif; text-align: center;">Find us<br>
+                    Sơn Trạch, Bố Trạch, Quảng Bình</p>
+            </div>
+            <div class="foot col-lg-4 col-md-4 col-sm-4">
+                <p>Call us to book<br>
+                    +84 977 560 122</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <p style="text-align: center;">Email us<br>
+                    phongnha.thaonguyen@gmail.com</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" hatstack col-lg-4 col-md-4 col-sm-4">
+
+            </div>
+
+            <div class=" foot col-lg-4 col-md-4 col-sm-4">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4">
+
+            </div>
+        </div>
+        <div class=" foot col-lg-12 col-md-12 col-sm-12 ">
+            <p>©Thao Nguyen Homestay. Proudly created by The Roving Route</p>
+        </div>
+    </div>
+    <br>
+</footer>
+<br>
+</html>
